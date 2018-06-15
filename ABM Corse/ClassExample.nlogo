@@ -1,4 +1,3 @@
-
 turtles-own [energy]
 
 to setup ;begins defining a procedure named "setup"
@@ -63,14 +62,14 @@ end
 
 to check-deth
   ask turtles [
-    if energy <= 0 [ die ]
-    if energy <= 10 [ set shape "face sad"]
+    if energy <= -5 [ die ]
+    if energy <= 30 [ set shape "face sad"]
   ]
 end
 
 to regrow-grass
   ask patches [
-    if random 100 < grass-growth [ set pcolor green ] ;when a random integer created is less then 3 regrow the grass (about 3% of the time)
+    if random 100 < grass-growth [ set pcolor brown ] ;when a random integer created is less then 3 regrow the grass (about 3% of the time)
   ]
 end
 @#$#@#$#@
